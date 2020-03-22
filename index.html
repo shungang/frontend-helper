@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>前端助手</title>
-	<style type="text/css">
-		.content{margin: 300px;}
-	</style>
-  </head>
-  <body>
-   <!--  electron
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>前端助手</title>
+  <link href="main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <!--  
+    npm start
+    electron
    1、字符长度
    2、url格式化
    3、json 格式化 
    -->
-<div class="content" id="app">
-	<input type="text" placeholder="请输入字符串"/>
-	<div>公共个字符，个字节</div>{{message}}
-</div>
-    <script src="./js/vue-2.6.11.js"></script>
-	<script src="./js/init.js"></script>
-  </body>
+  <div class="content" id="app">
+    <div class="line">
+      <div class="title">字符长度：</div>
+      <input type="text" placeholder="请输入字符串" id="inputStr" class="input"/>
+      <div id="msg"></div>
+    </div>
+    <div class="line">
+      <div class="title">url编码：</div>
+      <input type="text" placeholder="请输入字符串" id="inputUrl" class="input"/>
+      <input type="text" placeholder="编码结果" id="outUrl" class="input"/>
+    </div>
+    <div class="line">
+      <div class="title">url解码：</div>
+      <input type="text" placeholder="请输入字符串" id="deUrl" class="input"/>
+      <input type="text" placeholder="解码结果" id="deOutUrl" class="input"/>
+    </div>
+  </div>
+  <!-- <script src="./js/vue-2.6.11.js"></script>-->
+  <!-- <script src="./js/base.js"></script>  -->
+  <script src="./js/init.js"></script>
+</body>
 </html>

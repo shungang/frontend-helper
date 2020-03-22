@@ -1,0 +1,9 @@
+.content {
+    margin: 20px;
+    padding: 10px;
+    text-align: left;
+  }
+.title{width: 80px;}
+  .line{display:flex;align-items: center;}
+
+  .input{font-size: 18px; width: 340px;margin: 10px; padding: 5px;}
