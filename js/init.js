@@ -1,19 +1,3 @@
-
-//获得输入框中字符长度
-String.prototype.getBytesLength = function () {
-  var str = this
-  var bytesCount = 0;
-  for (var i = 0, n = str.length; i < n; i++) {
-    var c = str.charCodeAt(i);
-    if ((c >= 0x0001 && c <= 0x007e) || (0xff60 <= c && c <= 0xff9f)) {
-      bytesCount += 1;
-    } else {
-      bytesCount += 2;
-    }
-  }
-  return bytesCount;
-}
-
 window.onload = function () {
   let input = this.document.getElementById('inputStr')
   let msg = this.document.getElementById('msg')
@@ -35,5 +19,19 @@ window.onload = function () {
   deUrl.oninput = function () {
     deOutUrl.value = decodeURIComponent(deUrl.value)
   }
-  
+}
+
+//获得输入框中字符长度
+String.prototype.getBytesLength = function () {
+  var str = this
+  var bytesCount = 0;
+  for (var i = 0, n = str.length; i < n; i++) {
+    var c = str.charCodeAt(i);
+    if ((c >= 0x0001 && c <= 0x007e) || (0xff60 <= c && c <= 0xff9f)) {
+      bytesCount += 1;
+    } else {
+      bytesCount += 2;
+    }
+  }
+  return bytesCount;
 }
