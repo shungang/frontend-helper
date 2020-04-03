@@ -8,8 +8,8 @@ const path = require('path')
 function createWindow() {
 	// Create the browser window.
 	const mainWindow = new BrowserWindow({
-		width: 900,
-		height: 600,
+		width: 1100,
+		height: 1200,
 		webPreferences: {
 			nodeIntegration: true,	//允许中渲染进程中使用node
 			preload: path.join(__dirname, 'preload.js')
